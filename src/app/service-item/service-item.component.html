@@ -10,7 +10,9 @@
   <ul class="service-times">
     @for (item of itemss.availableTimes; track $index) {
       <li>{{item}}
-      <button class="book-button">Foglalás</button>
+        @if (itemss.availableTimes) {
+          <button class="book-button" >Foglalás</button>
+        }
     </li>
     }
   </ul>
