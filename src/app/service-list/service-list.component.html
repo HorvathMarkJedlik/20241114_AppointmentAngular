@@ -1,1 +1,17 @@
-<p>service-list works!</p>
+
+  <div class="service-container">
+    @for (item of services; track $index){
+      <div class="service-card">
+        <h3 class="serivce-title">{{item.name}}</h3>
+        <div class="service-person" >
+          <img class="person-photo" [src]="item.person.photoUrl" alt="">
+          <p class="person-name">{{item.person.name}}</p>
+        </div>
+        <p class="service-description">{{item.description}}</p>
+        <button (click)="selectPerson(item)" class="service-button">Részletek és foglalás</button>
+      </div>
+    }
+  </div>
+@if(currentItem){
+  <app-service-item [itemss]="currentItem" ></app-service-item>
+}

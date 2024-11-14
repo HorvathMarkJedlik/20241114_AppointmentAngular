@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { Service } from '../models/service.model';
 
 @Component({
   selector: 'app-service-item',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ServiceItemComponent {
 
+  @Input() itemss!: Service;
 }

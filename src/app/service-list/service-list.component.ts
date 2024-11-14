@@ -6,7 +6,15 @@ import { Service } from '../models/service.model';
   templateUrl: './service-list.component.html',
   styleUrl: './service-list.component.css',
 })
+
+
 export class ServiceListComponent {
+  currentItem: Service | undefined;
+
+  selectPerson(item: Service){
+    this.currentItem = item
+  }
+
   services: Service[] = [
     {
       id: 1,
