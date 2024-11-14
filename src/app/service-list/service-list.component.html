@@ -8,10 +8,10 @@
           <p class="person-name">{{item.person.name}}</p>
         </div>
         <p class="service-description">{{item.description}}</p>
-        <button (click)="selectPerson(item)" class="service-button">Részletek és foglalás</button>
+        <button (click)="selectedPerson = item" class="service-button">Részletek és foglalás</button>
       </div>
     }
   </div>
-@if(currentItem){
-  <app-service-item [itemss]="currentItem" ></app-service-item>
+@if(selectedPerson){
+  <app-service-item [itemss]="selectedPerson" ></app-service-item>
 }

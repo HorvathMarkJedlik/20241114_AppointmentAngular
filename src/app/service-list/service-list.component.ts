@@ -9,11 +9,7 @@ import { Service } from '../models/service.model';
 
 
 export class ServiceListComponent {
-  currentItem: Service | undefined;
-
-  selectPerson(item: Service){
-    this.currentItem = item
-  }
+  selectedPerson: Service |undefined
 
   services: Service[] = [
     {
